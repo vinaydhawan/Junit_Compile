@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name ="Junit_Compile" default="run" basedir=".">
+		<target name="cleanup">
+		<delete dir="bin" />
+		<delete dir="lib" />
+		<delete dir="src" />
+		<delete dir="reports" />
+		</target>
+		
+		<target name="create" depends="cleanup">
+		<mkdir dir="bin\testcases" />
+		<mkdir dir="lib" />
+		<mkdir dir="src" />
+		<mkdir dir="reports" />
+		</target>
+		
+		<target name ="copy" depends="create">
+		<copy overwrite="true" todir="lib">
+		<fileset dir="D:\jars" includes="*.jar"></fileset>
+		</copy>
+		<copy overwrite="true" todir="src\testcases">
+		<fileset dir="D:\Module_Junit_Ant1\src\testcases" includes="*.java"></fileset>
+		</copy>
+	</target>
+	
+	<path id="classpath">
+		<path location="lib">
+		<fileset dir="lib" includes="*.jar"></fileset>
+		</path>
+		<path location="bin"></path>
+		</path>
+		
+		<target name ="compile" depends ="copy">
+		<javac classpathref="classpath" includeantruntime="true" srcdir="src\testcases" destdir="bin" description="Compile Java files" includes="FirstTestCase.java">
+		</javac>
+	</target>
+	
+	
+		<target name ="run" depends ="compile">
+		<junit haltonfailure="false" printsummary="true">
+			<classpath refid="classpath"></classpath>
+			<test name="testcases.FirstTestCase" todir="reports"></test>
+			<formatter type="plain"></formatter>
+		</junit>
+	</target>
+</project>
