@@ -14,6 +14,7 @@ public class SecondTestCase {
 	@BeforeClass
 	public static void begin(){
 		System.out.println("*************begining*********************");
+		System.out.println("*************begining of branch concept*********************");
 	}
 	
 	@AfterClass
