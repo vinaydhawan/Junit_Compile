@@ -8,7 +8,7 @@ public class FirstTestCase {
 	@Test
 	public void loginTest(){
 		System.out.println("Testing an app");
-		System.out.println("Testing the GIT Directory");
+		System.out.println("Testing the GIT Directory updated in git link");
 	}
 	@Test
 	public void registerTest(){
