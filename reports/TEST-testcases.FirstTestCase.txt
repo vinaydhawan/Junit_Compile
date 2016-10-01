@@ -1,9 +1,9 @@
 Testsuite: testcases.FirstTestCase
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.036 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.147 sec
 ------------- Standard Output ---------------
 Testing an app
 Registering an user 
 ------------- ---------------- ---------------
 
 Testcase: loginTest took 0.001 sec
-Testcase: registerTest took 0 sec
+Testcase: registerTest took 0.001 sec

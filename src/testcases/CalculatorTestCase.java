@@ -27,7 +27,7 @@ public class CalculatorTestCase {
 	public void Addtest() {
 		int Result=mAdd(10,30);
 		if (Result ==400) {
-			System.out.println("Add logic is successful");
+			System.out.println("Add logic is success");
 		}else {
 			System.out.println("Add logic is failure");		
 		fail("Add logic not yet implemented");
